@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-m1
+  namespace: default
+data:
+  index.html: |
+    <HTML>
+    <HEAD><TITLE>IDAN KAKI</TITLE></HEAD>
+    <BODY>
+    <H1>Welcome to idan kaki</H1>
+    </BODY></HTML

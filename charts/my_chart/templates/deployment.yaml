@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.image.name }}
+  namespace: {{ .Values.namespace }}
+  labels: 
+    name: {{ .Values.labeling.label }}
+    app: {{ .Values.labeling.match_label }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.labeling.match_label }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.labeling.match_label }}
+    spec:
+      containers:
+        - name: {{ .Values.image.name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+          - containerPort: {{ .Values.service.port }}
+          volumeMounts:
+          - name: {{ .Values.volume.name }}
+            mountPath: /usr/share/nginx/html
+      volumes:
+        - name: {{ .Values.volume.name }}
+          configMap:
+            # Provide the name of the ConfigMap containing the files you want
+            # to add to the container
+            name: {{ .Values.volume.configmap_name }}
