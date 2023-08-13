@@ -9,6 +9,6 @@ entries:
     name: my-chart
     type: application
     urls:
-    - https://github.com/20perfect20/helm-charts/my-chart-1.0.0.tgz
+    - https://20perfect20.github.io/helm-charts/my-chart-1.0.0.tgz
     version: 1.0.0
 generated: "2023-08-13T16:11:07.522453+03:00"
