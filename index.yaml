@@ -11,4 +11,15 @@ entries:
     urls:
     - https://20perfect20.github.io/helm-charts/my-chart-1.0.0.tgz
     version: 1.0.0
-generated: "2023-08-13T16:11:07.522453+03:00"
+  nginx-chart:
+  - apiVersion: v2
+    appVersion: 1.25.1
+    created: "2023-08-15T07:51:24.105896099Z"
+    description: A Helm chart for Kubernetes
+    digest: 65ceaae0b01771461bf33db33a464e6eb0a8e6d3ff53841273df0ccb6edf11f9
+    name: nginx-chart
+    type: application
+    urls:
+    - https://github.com/20perfect20/helm-charts/releases/download/nginx-chart-0.1.0/nginx-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-08-15T07:51:24.1059082Z"
